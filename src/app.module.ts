@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Task } from './tasks.entity';
 
-import { TaskModule } from './tasks.module';  // Chemin ver le module a importer dans le @Module
+import { TasksModule } from './tasks/tasks.module';  // Chemin ver le module a importer dans le @Module
+import { TaskOrmEntity } from './tasks/infra/persistence/task.orm-entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -14,10 +14,10 @@ import { TaskModule } from './tasks.module';  // Chemin ver le module a importer
       username: 'postgres',
       password: 'postgres',
       database: 'todonest',
-      entities: [Task],
+      entities: [TaskOrmEntity],
       synchronize: true,
     }),
-    TaskModule
+    TasksModule
   ],
   controllers: [AppController],
   providers: [AppService],
