@@ -1,4 +1,4 @@
-import { TaskRepositoryPort } from '../../domain/ports/task.repository.port';
+import { TaskRepositoryPort } from '../ports/task.repository.port';
 
 export class UpdateTitleUseCase {
   constructor(private readonly taskRepository: TaskRepositoryPort) {}

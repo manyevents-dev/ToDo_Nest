@@ -1,7 +1,7 @@
 import { UpdateTitleUseCase } from '../update-title.use-case';
-import { TaskRepositoryPort } from '../../../domain/ports/task.repository.port';
-import { Task } from '../../../domain/entities/task.entity';
-import { TaskStatus } from '../../../domain/enums/task-status.enum';
+import { TaskRepositoryPort } from '../../ports/task.repository.port';
+import { Task } from '../../entities/task.entity';
+import { TaskStatus } from '../../enums/task-status.enum';
 
 describe('UpdateTitleUseCase', () => {
   let updateTitleUseCase: UpdateTitleUseCase;

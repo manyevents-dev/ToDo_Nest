@@ -1,6 +1,6 @@
 import { TaskStatus } from 'src/tasks/domain/enums/task-status.enum';
-import { Task } from '../../domain/entities/task.entity';
-import { TaskRepositoryPort } from '../../domain/ports/task.repository.port';
+import { Task } from '../entities/task.entity';
+import { TaskRepositoryPort } from '../ports/task.repository.port';
 
 export class CreateTaskUseCase {
   constructor(private readonly taskRepository: TaskRepositoryPort) {}

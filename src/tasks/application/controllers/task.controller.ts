@@ -1,13 +1,13 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
-import { CreateTaskUseCase } from '../../application/use-cases/create-task.use-case';
-import { UpdateTitleUseCase } from '../../application/use-cases/update-title.use-case';
-import { DeleteTaskUseCase } from '../../application/use-cases/delete-task.use-case';
-import { GetTasksUseCase } from '../../application/use-cases/get-tasks.use-case';
-import { UpdateStatusUseCase } from '../../application/use-cases/update-status.use-case';
+import { CreateTaskUseCase } from '../../domain/use-cases/create-task.use-case';
+import { UpdateTitleUseCase } from '../../domain/use-cases/update-title.use-case';
+import { DeleteTaskUseCase } from '../../domain/use-cases/delete-task.use-case';
+import { GetTasksUseCase } from '../../domain/use-cases/get-tasks.use-case';
+import { UpdateStatusUseCase } from '../../domain/use-cases/update-status.use-case';
 import { ApiOperation } from '@nestjs/swagger';
-import { CreateTaskDto } from 'src/tasks/dto/create-task.dto';
-import { UpdateTitleDto } from 'src/tasks/dto/update-title.dto';
-import { UpdateStatusDto } from 'src/tasks/dto/update-status.dto';
+import { CreateTaskDto } from '../dto/create-task.dto';
+import { UpdateTitleDto } from '../dto/update-title.dto';
+import { UpdateStatusDto } from '../dto/update-status.dto';
 
 @Controller('tasks')
 export class TaskController {

@@ -1,5 +1,5 @@
-import { TaskRepositoryPort } from '../../domain/ports/task.repository.port';
-import { TaskStatus } from '../../domain/enums/task-status.enum';
+import { TaskRepositoryPort } from '../ports/task.repository.port';
+import { TaskStatus } from '../enums/task-status.enum';
 
 export class UpdateStatusUseCase {
   constructor(private readonly taskRepository: TaskRepositoryPort) {}
